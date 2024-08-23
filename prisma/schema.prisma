@@ -1,0 +1,109 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  
+}
+
+datasource db {
+  provider = "postgresql"
+ url      = "postgresql://postgres:12345@localhost:5432/test4?schema=public" 
+}
+
+model user {
+  id Int @id @default(autoincrement())
+  name String
+  job String
+  image String
+  icon String
+  title String
+  information String
+
+}
+
+model style {
+  id Int @id @default(autoincrement())
+  name String
+  description String
+  time String
+  number Int
+  percent Int 
+  image String
+  link String
+  icon String
+
+
+}
+
+model profile {
+  id Int @id @default(autoincrement())
+  title String
+  description String
+
+}
+
+model experience {
+  id Int @id @default(autoincrement())
+  title String
+  job String
+  year String
+  description String
+
+}
+
+model education {
+  id Int @id @default(autoincrement())
+  uname String
+  job String
+  year String
+  description String
+
+}
+
+model skill {
+  id Int @id @default(autoincrement())
+  number Int
+  name String
+  percent Int
+}
+
+model works {
+  id Int @id @default(autoincrement())
+  title String
+  project String
+  image String
+  description String
+  job String
+  link String 
+  name String 
+
+
+}
+
+model contact {
+   id Int @id @default(autoincrement())
+   name String
+   title String
+   description String
+   mail String
+   phone Int
+
+
+
+}
+model dangnhap {
+  id Int @id @default(autoincrement())
+  user String
+  pass String
+}
+
+model social {
+  id Int @id @default(autoincrement())
+  name String 
+  link String
+  icon String
+}
