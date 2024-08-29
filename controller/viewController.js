@@ -13,7 +13,7 @@ getView: async(req,res) => {
 getViewUser: async(req,res) => {
     const genId = parseInt(req.params.ID);
     const getlist = await ViewModel.getViewUser(genId);
-    return res.render("userDetail", {userDetail: getlist[0]})
+    return res.render("userDetail", {userDetail: getlist})
 
 },
 deleViewUser: async(req,res) => {
@@ -54,7 +54,7 @@ detailPro: async(req,res) => {
    
     const genId = parseInt(req.params.ID);
     const detailPro=  await ViewModel.detailPro(genId)
-    return res.render("proDetail", {proDetail: detailPro[0]})
+    return res.render("proDetail", {proDetail: detailPro})
   
   
     
@@ -104,7 +104,7 @@ postExp:  async(req,res) => {
 detailExp: async(req,res) => {
     const genId = parseInt(req.params.ID);
     const detailExp=  await ViewModel.detailExp(genId)
-    return res.render("expDetail", {expDetail: detailExp[0]})
+    return res.render("expDetail", {expDetail: detailExp})
   
   
    
@@ -144,7 +144,7 @@ postEdu:  async(req,res) => {
 detailEdu: async(req,res) => {
     const genId = parseInt(req.params.ID);
     const detailEdu =  await ViewModel.detailEdu(genId)
-    return res.render("eduDetail", {eduDetail: detailEdu[0]})
+    return res.render("eduDetail", {eduDetail: detailEdu})
 },
 deleEdu: async(req,res) => {
     const genId = parseInt(req.params.ID);
@@ -183,7 +183,7 @@ detailskill: async(req,res) => {
    
     const genId = parseInt(req.params.ID);
     const detailskill=  await ViewModel.detailskill(genId)
-    return res.render("skillDetail", {skillDetail: detailskill[0]})
+    return res.render("skillDetail", {skillDetail: detailskill})
   
    
 },
@@ -228,7 +228,7 @@ detailWork: async(req,res) => {
     const genId = parseInt(req.params.ID);
    
     const detailport=  await ViewModel.detailWork(genId)
-    return res.render("workDetail", {workDetail: data[0]})
+    return res.render("workDetail", {workDetail: data})
    
 },
 deleWork: async(req,res) => {
@@ -276,7 +276,7 @@ postCtc:  async(req,res) => {
 detailCtc: async(req,res) => {
     const genId = parseInt(req.params.ID);
     const detailCtc =  await ViewModel.detailCtc(genId)
-    return res.render("ctcDetail", {ctcDetail: detailCtc[0]})
+    return res.render("ctcDetail", {ctcDetail: detailCtc})
 },
 deleCtc: async(req,res) => {
     const genId = parseInt(req.params.ID);
@@ -315,7 +315,7 @@ postSocial:  async(req,res) => {
 detailSocial: async(req,res) => {
     const genId = parseInt(req.params.ID);
     const detailCtc =  await ViewModel.detailSocial(genId)
-    return res.render("socialDetail", {socialDetail: detailCtc[0]})
+    return res.render("socialDetail", {socialDetail: detailCtc})
 },
 deleSocial: async(req,res) => {
     const genId = parseInt(req.params.ID);

@@ -33,11 +33,11 @@ app.use(session({
   saveUninitialized: true,
   cookie: { secure: false } 
 }));
-app.use('/admin',requireLogin.requireLogin,viewRouter);
+app.use('/admin',viewRouter);
 app.use('/', userRouter);
 app.use('/', login)
 
-
+// requireLogin.requireLogin,
 
 
 
